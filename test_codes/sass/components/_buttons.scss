@@ -1,0 +1,23 @@
+// Buttons
+
+$btns: ('primary','secondary','tertiary');
+$btn-colors: (
+    'primary': $primary-color,
+    'secondary': $secondary-color,
+    'tertiary': $tertiary-color
+);
+
+.btns {
+    @extend %btns;
+}
+
+@each $btn in $btns {
+    .btn-#{$btn} {
+        background-color: map-get($btn-colors, $btn);
+        @include box-shadow(3px 4px 0px 0px rgba(map-get($btn-colors, $btn), 0.6));
+        &:hover {
+            background-color: lighten(map-get($btn-colors, $btn), 15%);
+            @include box-shadow(3px 4px 0px 0px rgba( lighten(map-get($btn-colors, $btn), 15%) , 0.6));
+        }
+    }
+}

@@ -1,0 +1,54 @@
+// Mixins
+
+@mixin rounded($radius...) {
+    @if $radius {
+        //@include border-radius($radius);
+        -moz-border-radius: $radius $radius $radius $radius;
+        -moz-border-radius: $radius;
+        -webkit-border-radius: $radius $radius $radius $radius;
+        -webkit-border-radius: $radius;
+        border-radius: $radius $radius $radius $radius;
+        border-radius: $radius;
+    }
+}
+
+@mixin grid($items, $subtractedWidth: false) {
+    $width: 100%;
+    @if $subtractedWidth {
+        @include widthCalc(getWidthPercentage($width, $items),$subtractedWidth);
+    }
+    @else {
+        width: getWidthPercentage($width, $items);
+    }
+    float: left;
+}
+
+@mixin clearfix {
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+
+@mixin widthCalc($a,$b) {
+    width: -webkit-calc(#{$a} - #{$b});
+    width: -moz-calc(#{$a} - #{$b});
+    width: calc(#{$a} - #{$b});
+}
+
+@mixin resetBtn {
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}

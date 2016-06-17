@@ -1,0 +1,47 @@
+// Forms
+
+form {
+    .form-group {
+        margin: 10px 0;
+        input[type="submit"] {
+            @include rounded(5px);
+            @include resetBtn;
+            background-color: $secondary-color;
+            @include box-shadow(3px 4px 0px 0px rgba($secondary-color, 0.6));
+            padding: 10px 20px;
+            color: $white;
+            text-transform: uppercase;
+            &:hover {
+                background-color: lighten($secondary-color, 15%);
+                @include box-shadow(3px 4px 0px 0px rgba(lighten($secondary-color, 15%), 0.6));
+            }
+        }
+    }
+    .form-label,
+    .form-input {
+        @include inline-block(middle,middle);
+        input {
+            padding: 5px;
+            outline: none;
+            &::-webkit-input-placeholder {
+               color: $secondary-color;
+            }
+            &:-moz-placeholder { /* Firefox 18- */
+               color: $secondary-color;  
+            }
+            &::-moz-placeholder {  /* Firefox 19+ */
+               color: $secondary-color;  
+            }
+            &:-ms-input-placeholder {  
+               color: $secondary-color;  
+            }
+        }
+    }
+    .form-label {
+        min-width: 150px;
+        font: {
+            weight: 700;
+            size: 1.2rem;
+        }
+    }
+}
