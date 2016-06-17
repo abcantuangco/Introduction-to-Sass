@@ -749,8 +749,8 @@
 
 								// SCSS
 
-								$succes_color: #137200;
-								$error_color: #C00000;
+								$succes-color: #137200;
+								$error-color: #C00000;
 							
 								.message {
 									font: {
@@ -765,14 +765,14 @@
 
 								.success {
 									@extend .message;
-									font-color: $error_color;
-									border-color: $succes_color;
+									font-color: $error-color;
+									border-color: $succes-color;
 								}
 
 								.error {
 									@extend .message;
-									font-color: $error_color;
-									border-color: $error_color;
+									font-color: $error-color;
+									border-color: $error-color;
 								}
 							
 							</script>
@@ -821,11 +821,11 @@
 									@return $total / $items;
 								}
 
-								$box_size: 50px;
-								$box_count: 3;
+								$box-size: 50px;
+								$box-count: 3;
 
 								.container {
-									width: multiply( $box_size, $box_count );
+									width: multiply( $box-size, $box-count );
 									.box {
 										width: getWidthPercentage(100%, 3);
 									}
@@ -869,20 +869,20 @@
 									vertical-align: middle;
 								}
 
-								$box_size: 50px;
-								$box_border_color: #000;
+								$box-size: 50px;
+								$box-border-color: #000;
 
 								.box-inline {
-									border: 1px solid $box_border_color;
-									height: $box_size;
-									width: $box_size;
+									border: 1px solid $box-border-color;
+									height: $box-size;
+									width: $box-size;
 									@include inline;
 								}
 
 								.box-forced-inline {
-									border: 1px solid $box_border_color;
-									height: $box_size;
-									width: $box_size;
+									border: 1px solid $box-border-color;
+									height: $box-size;
+									width: $box-size;
 									@include inline(true);
 								}
 
