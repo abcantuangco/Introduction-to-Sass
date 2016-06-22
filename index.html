@@ -247,6 +247,29 @@
 						</div>
 						<img src="images/check-installed-ubunto.png" alt="">
 					</section>
+					<section>
+						<h2 class="medium">compile sass code</h3>
+					</section>
+					<section>
+						<p>Both Windows and Ubunto</p>
+						<div data-markdown>
+							<script type="text/template">
+							<!-- .slide: data-background="#ff0000" -->
+							
+								// Sass Only
+
+								sass --watch app/sass:public/stylesheets
+								sass --update app/sass:public/stylesheets
+
+								// Using Compass
+
+								compass compile app/sass
+								compass watch app/sass
+
+							
+							</script>
+						</div>
+					</section>
 				</section>
 				<section>
 					<section>

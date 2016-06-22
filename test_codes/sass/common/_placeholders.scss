@@ -11,3 +11,19 @@
         decoration: none;
     }
 }
+
+%spin {
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+  display: inline-block;
+}
+
+%transition-5ms {
+    @include single-transition(all, 0.5s, ease, false);
+}
+
+%scale {
+    @include transform(scale(1.1));
+}

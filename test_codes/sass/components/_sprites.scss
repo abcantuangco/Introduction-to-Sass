@@ -1,0 +1,12 @@
+$emoticons-layout: 'smart';
+$emoticons-sprite-dimensions: true;
+@import "emoticons/*.png";
+
+$icons: ('love','happy','neutral','sad','angry');
+
+@each $icon in $icons {
+    .sprite-#{$icon} {
+        @include emoticons-sprite($icon);
+        @include inline-block(middle,middle);
+    }
+}

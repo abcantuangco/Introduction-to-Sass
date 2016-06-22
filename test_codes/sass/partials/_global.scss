@@ -4,14 +4,19 @@ html {
     font-family: $base-font-family;
 }
 
-$grid-subtracted-width: 2px + 10px + 30px;
+$grid-subtracted-width: 10px; // 10px is the margins of the boxes
+
+a {
+    text-decoration: none;
+    outline: none;
+}
 
 @media #{$small-up} {
     html {
         font-size: 70%;
     }
     .grids {
-        @include grid(1, $grid-subtracted-width); // 2px is the border and 10px is the margins
+        @include grid(1, $grid-subtracted-width);
     }
 }
 @media #{$medium-up} {
@@ -19,7 +24,7 @@ $grid-subtracted-width: 2px + 10px + 30px;
         font-size: 70%;
     }
     .grids {
-        @include grid(2, $grid-subtracted-width); // 2px is the border and 10px is the margins
+        @include grid(2, $grid-subtracted-width);
     }
 }
 @media #{$large-up} {
@@ -27,7 +32,7 @@ $grid-subtracted-width: 2px + 10px + 30px;
         font-size: 80%;
     }
     .grids {
-        @include grid(4, $grid-subtracted-width); // 2px is the border and 10px is the margins
+        @include grid(4, $grid-subtracted-width);
     }
 }
 

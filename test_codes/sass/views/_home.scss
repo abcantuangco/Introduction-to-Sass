@@ -4,6 +4,10 @@
     padding: 20px;
     a {
         margin: 5px 5px;
+        &:hover {
+            text-decoration: none;
+            color: $white;
+        }
         &:last-child {
             margin-right: 0;
         }
@@ -36,4 +40,168 @@
 .form-container {
     padding: 20px;
     border: 5px solid $tertiary-color;
+}
+
+.sprite-container {
+    border: 5px solid $primary-color;
+    padding: 20px;
+    h2 {
+        font: {
+            size: 2rem;
+            weight: 700;
+        }
+        margin-bottom: 20px;
+    }
+    ul {
+        list-style: none;
+        li {
+            @include inline-block(middle,middle);
+        }
+    }
+}
+
+.font-icons-container {
+    border: 5px solid $secondary-color;
+    padding: 20px;
+    h2 {
+        font: {
+            size: 2rem;
+            weight: 700;
+        }
+        margin-bottom: 20px;
+    }
+    ul {
+        list-style: none;
+    }
+
+    $box-size: 60px;
+
+    li {
+        @include inline-block(middle,middle);
+        width: $box-size;
+        height: $box-size;
+        text-align: center;
+        border-width: 1px;
+        border-style: solid;
+        @include rounded(100%);
+        span {
+            @include inline-block(middle,middle);
+            font-size: 2.5rem;
+            line-height: 1.9;
+        }
+
+        &:nth-child(1) {
+            border-color: $twitter-color;
+            @extend %transition-5ms;
+            span {
+                @extend %transition-5ms;
+                color: $twitter-color;
+            }
+            &:hover {
+                background-color: $twitter-color;
+                span {
+                    color: $white;
+                    @extend %scale;
+                }
+            }
+        }
+        &:nth-child(2) {
+            border-color: $facebook-color;
+            @extend %transition-5ms;
+            span {
+                @extend %transition-5ms;
+                color: $facebook-color;
+            }
+            &:hover {
+                background-color: $facebook-color;
+                span {
+                    color: $white;
+                    @extend %scale;
+                }
+            }
+        }
+        &:nth-child(3) {
+            border-color: $instagram-color;
+            @extend %transition-5ms;
+            span {
+                @extend %transition-5ms;
+                color: $instagram-color;
+            }
+            &:hover {
+                background-color: $instagram-color;
+                span {
+                    color: $white;
+                    @extend %scale;
+                }
+            }
+        }
+        &:nth-child(4) {
+            border-color: $linkedin-color;
+            @extend %transition-5ms;
+            span {
+                @extend %transition-5ms;
+                color: $linkedin-color;
+            }
+            &:hover {
+                background-color: $linkedin-color;
+                span {
+                    color: $white;
+                    @extend %scale;
+                }
+            }
+        }
+        &:nth-child(5) {
+            border-color: $heart-color;
+            @extend %transition-5ms;
+            span {
+                @extend %transition-5ms;
+                color: $heart-color;
+            }
+            &:hover {
+                background-color: $heart-color;
+                span {
+                    color: $white;
+                    @extend %scale;
+                }
+            }
+        }
+        &:nth-child(6) {
+            border-color: $spinner-color;
+            @extend %transition-5ms;
+            span {
+                @extend %transition-5ms;
+                color: $spinner-color;
+            }
+            &:hover {
+                background-color: $spinner-color;
+                span {
+                    color: $white;
+                    @extend %spin;
+                }
+            }
+        }
+    }
+}
+
+.bootstrap-container {
+    border: 5px solid $secondary-color;
+    padding: 20px;
+    h2 {
+        font: {
+            size: 2rem;
+            weight: 700;
+        }
+        margin-bottom: 20px;
+    }
+    .row > div {
+        background-color: $grey;
+        text-align: center;
+        border: 1px solid $white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font: {
+            size: 1.4rem;
+            weight: 700;
+        }
+    }
 }
