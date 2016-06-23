@@ -128,7 +128,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 15, ../sass/common/_placeholders.scss */
-.font-icons-container li:nth-child(6):hover span {
+.font-icons-container ul li:nth-child(6):hover span {
   -moz-animation: spin 2s infinite linear;
   -o-animation: spin 2s infinite linear;
   -webkit-animation: spin 2s infinite linear;
@@ -137,7 +137,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 23, ../sass/common/_placeholders.scss */
-.font-icons-container li:nth-child(1), .font-icons-container li:nth-child(1) span, .font-icons-container li:nth-child(2), .font-icons-container li:nth-child(2) span, .font-icons-container li:nth-child(3), .font-icons-container li:nth-child(3) span, .font-icons-container li:nth-child(4), .font-icons-container li:nth-child(4) span, .font-icons-container li:nth-child(5), .font-icons-container li:nth-child(5) span, .font-icons-container li:nth-child(6), .font-icons-container li:nth-child(6) span {
+.font-icons-container ul li:nth-child(1), .font-icons-container ul li:nth-child(1) span, .font-icons-container ul li:nth-child(2), .font-icons-container ul li:nth-child(2) span, .font-icons-container ul li:nth-child(3), .font-icons-container ul li:nth-child(3) span, .font-icons-container ul li:nth-child(4), .font-icons-container ul li:nth-child(4) span, .font-icons-container ul li:nth-child(5), .font-icons-container ul li:nth-child(5) span, .font-icons-container ul li:nth-child(6), .font-icons-container ul li:nth-child(6) span {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -145,7 +145,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 27, ../sass/common/_placeholders.scss */
-.font-icons-container li:nth-child(1):hover span, .font-icons-container li:nth-child(2):hover span, .font-icons-container li:nth-child(3):hover span, .font-icons-container li:nth-child(4):hover span, .font-icons-container li:nth-child(5):hover span {
+.font-icons-container ul li:nth-child(1):hover span, .font-icons-container ul li:nth-child(2):hover span, .font-icons-container ul li:nth-child(3):hover span, .font-icons-container ul li:nth-child(4):hover span, .font-icons-container ul li:nth-child(5):hover span {
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -227,19 +227,26 @@ html {
   font-family: Arial, Serif;
 }
 
-/* line 9, ../sass/partials/_global.scss */
-a {
+/* line 10, ../sass/partials/_global.scss */
+a, a:hover, a:visited, a:active, a:focus {
   text-decoration: none;
   outline: none;
 }
 
+/* line 20, ../sass/partials/_global.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 @media only screen {
-  /* line 15, ../sass/partials/_global.scss */
+  /* line 27, ../sass/partials/_global.scss */
   html {
     font-size: 70%;
   }
 
-  /* line 18, ../sass/partials/_global.scss */
+  /* line 30, ../sass/partials/_global.scss */
   .grids {
     width: -webkit-calc(100% - 10px);
     width: -moz-calc(100% - 10px);
@@ -248,12 +255,12 @@ a {
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 23, ../sass/partials/_global.scss */
+  /* line 35, ../sass/partials/_global.scss */
   html {
     font-size: 70%;
   }
 
-  /* line 26, ../sass/partials/_global.scss */
+  /* line 38, ../sass/partials/_global.scss */
   .grids {
     width: -webkit-calc(50% - 10px);
     width: -moz-calc(50% - 10px);
@@ -262,12 +269,12 @@ a {
   }
 }
 @media only screen and (min-width: 992px) {
-  /* line 31, ../sass/partials/_global.scss */
+  /* line 43, ../sass/partials/_global.scss */
   html {
     font-size: 80%;
   }
 
-  /* line 34, ../sass/partials/_global.scss */
+  /* line 46, ../sass/partials/_global.scss */
   .grids {
     width: -webkit-calc(25% - 10px);
     width: -moz-calc(25% - 10px);
@@ -275,7 +282,7 @@ a {
     float: left;
   }
 }
-/* line 39, ../sass/partials/_global.scss */
+/* line 51, ../sass/partials/_global.scss */
 .clearfix:after {
   content: "";
   display: block;
@@ -539,15 +546,15 @@ footer {
   margin: 5px 5px;
 }
 /* line 7, ../sass/views/_home.scss */
-.btns-container a:hover {
+.btns-container a:hover, .btns-container a:visited, .btns-container a:active, .btns-container a:focus {
   text-decoration: none;
   color: #fff;
 }
-/* line 11, ../sass/views/_home.scss */
+/* line 14, ../sass/views/_home.scss */
 .btns-container a:last-child {
   margin-right: 0;
 }
-/* line 15, ../sass/views/_home.scss */
+/* line 18, ../sass/views/_home.scss */
 .btns-container p {
   padding-bottom: 20px;
   text-transform: uppercase;
@@ -555,12 +562,12 @@ footer {
   font-size: 1.2rem;
 }
 
-/* line 25, ../sass/views/_home.scss */
+/* line 28, ../sass/views/_home.scss */
 .box-grid-container {
   border: 5px solid #0C00F5;
   padding: 20px;
 }
-/* line 28, ../sass/views/_home.scss */
+/* line 31, ../sass/views/_home.scss */
 .box-grid-container .grids {
   height: 100px;
   border: 1px solid #F60000;
@@ -570,28 +577,28 @@ footer {
   font-weight: 700;
 }
 
-/* line 40, ../sass/views/_home.scss */
+/* line 43, ../sass/views/_home.scss */
 .form-container {
   padding: 20px;
   border: 5px solid #12BE00;
 }
 
-/* line 45, ../sass/views/_home.scss */
+/* line 48, ../sass/views/_home.scss */
 .sprite-container {
   border: 5px solid #F60000;
   padding: 20px;
 }
-/* line 48, ../sass/views/_home.scss */
+/* line 51, ../sass/views/_home.scss */
 .sprite-container h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
-/* line 55, ../sass/views/_home.scss */
+/* line 58, ../sass/views/_home.scss */
 .sprite-container ul {
   list-style: none;
 }
-/* line 57, ../sass/views/_home.scss */
+/* line 60, ../sass/views/_home.scss */
 .sprite-container ul li {
   display: inline-block;
   vertical-align: middle;
@@ -600,23 +607,23 @@ footer {
   *display: inline;
 }
 
-/* line 63, ../sass/views/_home.scss */
+/* line 66, ../sass/views/_home.scss */
 .font-icons-container {
   border: 5px solid #0C00F5;
   padding: 20px;
 }
-/* line 66, ../sass/views/_home.scss */
+/* line 70, ../sass/views/_home.scss */
 .font-icons-container h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
-/* line 73, ../sass/views/_home.scss */
+/* line 77, ../sass/views/_home.scss */
 .font-icons-container ul {
   list-style: none;
 }
 /* line 79, ../sass/views/_home.scss */
-.font-icons-container li {
+.font-icons-container ul li {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: middle;
@@ -635,7 +642,7 @@ footer {
   border-radius: 100%;
 }
 /* line 87, ../sass/views/_home.scss */
-.font-icons-container li span {
+.font-icons-container ul li span {
   display: inline-block;
   vertical-align: middle;
   *vertical-align: middle;
@@ -645,99 +652,99 @@ footer {
   line-height: 1.9;
 }
 /* line 93, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(1) {
+.font-icons-container ul li:nth-child(1) {
   border-color: #31ABF6;
 }
 /* line 96, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(1) span {
+.font-icons-container ul li:nth-child(1) span {
   color: #31ABF6;
 }
 /* line 100, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(1):hover {
+.font-icons-container ul li:nth-child(1):hover {
   background-color: #31ABF6;
 }
 /* line 102, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(1):hover span {
+.font-icons-container ul li:nth-child(1):hover span {
   color: #fff;
 }
 /* line 108, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(2) {
+.font-icons-container ul li:nth-child(2) {
   border-color: #4867AA;
 }
 /* line 111, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(2) span {
+.font-icons-container ul li:nth-child(2) span {
   color: #4867AA;
 }
 /* line 115, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(2):hover {
+.font-icons-container ul li:nth-child(2):hover {
   background-color: #4867AA;
 }
 /* line 117, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(2):hover span {
+.font-icons-container ul li:nth-child(2):hover span {
   color: #fff;
 }
 /* line 123, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(3) {
+.font-icons-container ul li:nth-child(3) {
   border-color: #e1306c;
 }
 /* line 126, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(3) span {
+.font-icons-container ul li:nth-child(3) span {
   color: #e1306c;
 }
 /* line 130, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(3):hover {
+.font-icons-container ul li:nth-child(3):hover {
   background-color: #e1306c;
 }
 /* line 132, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(3):hover span {
+.font-icons-container ul li:nth-child(3):hover span {
   color: #fff;
 }
 /* line 138, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(4) {
+.font-icons-container ul li:nth-child(4) {
   border-color: #0077B5;
 }
 /* line 141, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(4) span {
+.font-icons-container ul li:nth-child(4) span {
   color: #0077B5;
 }
 /* line 145, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(4):hover {
+.font-icons-container ul li:nth-child(4):hover {
   background-color: #0077B5;
 }
 /* line 147, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(4):hover span {
+.font-icons-container ul li:nth-child(4):hover span {
   color: #fff;
 }
 /* line 153, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(5) {
+.font-icons-container ul li:nth-child(5) {
   border-color: #fc636b;
 }
 /* line 156, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(5) span {
+.font-icons-container ul li:nth-child(5) span {
   color: #fc636b;
 }
 /* line 160, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(5):hover {
+.font-icons-container ul li:nth-child(5):hover {
   background-color: #fc636b;
 }
 /* line 162, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(5):hover span {
+.font-icons-container ul li:nth-child(5):hover span {
   color: #fff;
 }
 /* line 168, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(6) {
+.font-icons-container ul li:nth-child(6) {
   border-color: #9B9B9B;
 }
 /* line 171, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(6) span {
+.font-icons-container ul li:nth-child(6) span {
   color: #9B9B9B;
 }
 /* line 175, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(6):hover {
+.font-icons-container ul li:nth-child(6):hover {
   background-color: #9B9B9B;
 }
 /* line 177, ../sass/views/_home.scss */
-.font-icons-container li:nth-child(6):hover span {
+.font-icons-container ul li:nth-child(6):hover span {
   color: #fff;
 }
 

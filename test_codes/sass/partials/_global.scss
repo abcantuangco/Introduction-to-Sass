@@ -7,8 +7,20 @@ html {
 $grid-subtracted-width: 10px; // 10px is the margins of the boxes
 
 a {
-    text-decoration: none;
-    outline: none;
+    &,
+    &:hover,
+    &:visited,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 @media #{$small-up} {
