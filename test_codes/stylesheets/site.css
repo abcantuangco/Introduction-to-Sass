@@ -227,13 +227,13 @@ html {
   font-family: Arial, Serif;
 }
 
-/* line 10, ../sass/partials/_global.scss */
+/* line 8, ../sass/partials/_global.scss */
 a, a:hover, a:visited, a:active, a:focus {
   text-decoration: none;
   outline: none;
 }
 
-/* line 20, ../sass/partials/_global.scss */
+/* line 18, ../sass/partials/_global.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

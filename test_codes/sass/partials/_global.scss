@@ -4,8 +4,6 @@ html {
     font-family: $base-font-family;
 }
 
-$grid-subtracted-width: 10px; // 10px is the margins of the boxes
-
 a {
     &,
     &:hover,
@@ -22,6 +20,8 @@ a {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+$grid-subtracted-width: 10px; // 10px is the margins of the boxes
 
 @media #{$small-up} {
     html {
